@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BusquedaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/buscar',[BusquedaController::class,'index'])->name('busqueda.index');
+Route::get('/resultat',[BusquedaController::class,'show'])->name('busqueda.show');
