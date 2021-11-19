@@ -1,3 +1,5 @@
+    <a href="{{route('busqueda.index')}}">Tornar</a>
+
     @foreach(hash_algos() as $hash)
         <h4>{{$name->palabra}} encriptat amb {{$hash}}:</h4>
         <p>{{hash($hash, $name)}}</p>
